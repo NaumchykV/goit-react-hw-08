@@ -23,16 +23,16 @@ const App = () => {
   return (
     <Router>
       <Toaster position="top-right" reverseOrder={false} />
-      {!isRefreshing && (
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
+      <Layout>
+        {!isRefreshing && (
+          <Routes>
+            <Route path="/" element={<HomePage />} />
             <Route path="register" element={<RestrictedRoute component={RegistrationPage} redirectTo="/contacts" />} />
             <Route path="login" element={<RestrictedRoute component={LoginPage} redirectTo="/contacts" />} />
             <Route path="contacts" element={<PrivateRoute component={ContactsPage} redirectTo="/login" />} />
-          </Route>
-        </Routes>
-      )}
+          </Routes>
+        )}
+      </Layout>
     </Router>
   );
 }
