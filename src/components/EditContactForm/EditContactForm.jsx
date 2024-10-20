@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { updateContact } from '../../redux/contacts/contactsOps';
+import { updateContact } from '../../redux/contacts/operations';
 import { toast } from 'react-hot-toast';
 import css from './EditContactForm.module.css';
 

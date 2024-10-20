@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectLoading, selectError, selectFilteredContacts } from '../../redux/contacts/contactsSelectors';
-import { fetchContacts } from '../../redux/contacts/contactsOps';
+import { selectLoading, selectError, selectFilteredContacts } from '../../redux/contacts/selectors';
+import { fetchContacts } from '../../redux/contacts/operations';
 import ContactItem from '../Contact/Contact';
 import List from '@mui/material/List';
 import CircularProgress from '@mui/material/CircularProgress';
